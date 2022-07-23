@@ -1,7 +1,9 @@
 package com.example.swimmingcallender.service;
 
 import com.example.swimmingcallender.domain.Post;
+import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -10,15 +12,26 @@ import java.util.List;
  * @author kshitijbaluni
  * @since 23 July 2022
  */
-public class PostServiceImplementation implements PostService{
+@Service
+public class PostServiceImplementation implements PostService {
   @Override
   public List<Post> getPosts() {
-    return null;
+    return List.of(Post.builder()
+                     .postId(1)
+                     .postName("My First Post")
+                     .postDescription("Test Post")
+                     .postAuthor("Kshitij")
+                     .createAt(new Date()).build());
   }
 
   @Override
   public Post getPost(long id) {
-    return null;
+    return Post.builder()
+      .postId(1)
+      .postName("My First Post")
+      .postDescription("Test Post")
+      .postAuthor("Kshitij")
+      .createAt(new Date()).build();
   }
 
   @Override
