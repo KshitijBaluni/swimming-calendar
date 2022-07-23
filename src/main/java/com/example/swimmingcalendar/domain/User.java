@@ -1,4 +1,4 @@
-package com.example.swimmingcallender.domain;
+package com.example.swimmingcalendar.domain;
 
 import lombok.Builder;
 import lombok.Data;

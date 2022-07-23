@@ -1,7 +1,7 @@
-package com.example.swimmingcallender.controller;
+package com.example.swimmingcalendar.controller;
 
-import com.example.swimmingcallender.domain.User;
-import com.example.swimmingcallender.service.NotificationService;
+import com.example.swimmingcalendar.domain.User;
+import com.example.swimmingcalendar.service.NotificationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;

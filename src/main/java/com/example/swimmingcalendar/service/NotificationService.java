@@ -1,4 +1,4 @@
-package com.example.swimmingcallender.service;
+package com.example.swimmingcalendar.service;
 
 import lombok.Data;
 import org.springframework.stereotype.Service;
