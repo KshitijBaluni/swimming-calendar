@@ -3,6 +3,7 @@ package com.example.swimmingcallender.controller;
 import com.example.swimmingcallender.domain.User;
 import com.example.swimmingcallender.service.NotificationService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class PageController {
   private NotificationService notificationService;
+  @Value("${pagecontroller.msg}")
+  private String propertiesMsg;
 
   @Autowired
   public PageController(NotificationService notificationService) {
@@ -40,5 +43,10 @@ public class PageController {
   @RequestMapping("/notification")
   public String notification() {
     return notificationService.toString();
+  }
+
+  @RequestMapping("/properties")
+  public String properties() {
+    return propertiesMsg;
   }
 }
