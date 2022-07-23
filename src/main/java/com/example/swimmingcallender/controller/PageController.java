@@ -4,6 +4,12 @@ import com.example.swimmingcallender.domain.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * Page Controller.
+ *
+ * @author kshitijbaluni
+ * @since 23 July 2022
+ */
 @RestController
 public class PageController {
   @RequestMapping("/home")
@@ -15,5 +21,10 @@ public class PageController {
       .email("kbaluni@gmail.com")
       .build()
       .toString();
+  }
+
+  @RequestMapping("/about")
+  public String about() {
+    return "Its all about Swimming.";
   }
 }
